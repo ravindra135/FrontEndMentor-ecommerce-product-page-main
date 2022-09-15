@@ -7,6 +7,7 @@ const menuCloseBtn = document.getElementById('hamberger-menu-close')
 /* NavBar Open & Close */
 menuOpenBtn.addEventListener('click', menuOpen);
 menuCloseBtn.addEventListener('click', menuClose);
+window.addEventListener('mouseup', menuClose);
 
 function menuOpen() {
     slideMenu.style.animation = 'slide-in .6s';
@@ -17,9 +18,9 @@ function menuOpen() {
 }
 
 function menuClose() {
-    slideMenu.style.animation = 'slide-out .4s';
-    slideMenu.classList.toggle('open');
-    if(!slideMenu.classList.contains('open')) {
+    if(slideMenu.classList.contains('open')) {
+        slideMenu.style.animation = 'slide-out .5s';
+        slideMenu.classList.toggle('open');
         document.querySelector('nav').classList.toggle('menuOpen');
     }
 }

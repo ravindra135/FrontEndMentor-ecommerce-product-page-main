@@ -103,6 +103,7 @@ nav .slide-menu ul li {
 }
 nav .slide-menu ul li a {
     text-decoration: none;
+    color: hsl(0, 0%, 0%);
     font-weight: 700;
     font-size: 17px;
 }
