@@ -12,7 +12,7 @@
     --grayish-blue: hsl(220, 14%, 75%);
     --light-grayish-blue: hsl(223, 64%, 98%);
     --clr-white: hsl(0, 0%, 100%);
-    --clr-black: hsl(0, 0%, 0%); //(with 75% opacity for lightbox background)
+    --clr-black: hsl(0, 0%, 0%, 0.75); //(with 75% opacity for lightbox background)
 }
 
 * {
@@ -30,8 +30,10 @@ body {
 .mob-padd {
     padding: 0 1rem;
 }
+.hidden {
+    display: none;
+}
 /* Header */
-
 header {
     border: 1px solid green;
     display: flex;
@@ -47,6 +49,64 @@ header {
     gap: 15px;
 }
 
+nav.menuOpen {
+    background-color: var(--clr-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+}
+
+nav .slide-menu {
+    position: absolute;
+    top: 0;
+    left: -270px;
+    background-color: var(--clr-white);
+    height: 100%;
+    width: 50vw;
+    padding: 2.3rem;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -270px;
+        opacity: 0%;
+    }
+    100% {
+        left: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        left: 0;
+        opacity: 100%;
+    }
+    100% {
+        left: -270px;
+        opacity: 0%;
+    }
+}
+
+nav .slide-menu.open {
+    left: 0;
+}
+ 
+nav .slide-menu ul {
+    list-style: none;
+    margin-top: 3rem;
+}
+nav .slide-menu ul li {
+    margin-top: 1.7rem;
+}
+nav .slide-menu ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+}
+
 .avatar-cart-group {
     border: 1px solid purple;
     display: flex;
@@ -54,7 +114,7 @@ header {
     gap: 15px;
 }
 .avatar-cart-group .avatar img {
-    width: 2rem;
+    width: 1.7rem;
     border: 2px solid transparent;
     cursor: pointer;
 }

@@ -19,13 +19,23 @@
     <header>
       <div class="menu-brand-group">
         <div class="menu-btn">
-          <img src="./images/icon-menu.svg" alt="">
+          <img id="hamberger-menu-open" src="./images/icon-menu.svg" alt="">
         </div>
         <div class="brand">
           <img src="./images/logo.svg" alt="">
         </div>
         <nav>
-          <!-- Nav Goes Here -->
+          <div id="menu-mobile" class="slide-menu">
+            <img id="hamberger-menu-close" src="./images/icon-close.svg" alt="">
+
+            <ul>
+              <li><a href="">Collections</a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
         </nav>
       </div>  
       <div class="avatar-cart-group">
@@ -39,5 +49,6 @@
       </div>
     </header>
   </div>
+  <script src="./app.js"></script>
 </body>
 </html>
