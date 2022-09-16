@@ -292,6 +292,9 @@ nav .slide-menu ul li a {
     justify-content: center;
     cursor: pointer;
 }
+.image-gallery {
+    display: none;
+}
 /* End of Section Image Slider */
 
 /* Product Info */
@@ -368,6 +371,11 @@ nav .slide-menu ul li a {
     -webkit-box-shadow: 0px 20px 45px -14px rgba(255,125,26,0.9);
     -moz-box-shadow: 0px 20px 45px -14px rgba(255,125,26,0.9);
     box-shadow: 0px 20px 45px -14px rgba(255,125,26,0.9);
+}
+.addToCart:hover {
+    -webkit-box-shadow: 0px 20px 45px -5px rgba(255,125,26,0.9);
+    -moz-box-shadow: 0px 20px 45px -5px rgba(255,125,26,0.9);
+    box-shadow: 0px 20px 45px -5px rgba(255,125,26,0.9);
 }
 .addToCart img {
     filter: brightness(300%);
