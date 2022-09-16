@@ -50,6 +50,9 @@ header {
     align-items: center;
     gap: 15px;
 }
+.menu-btn {
+    cursor: pointer;
+}
 
 nav.menuOpen {
     background-color: var(--clr-black);
@@ -238,6 +241,10 @@ nav .slide-menu ul li a {
 .cart-items .cart-item-remove {
     margin-left: auto;
     cursor: pointer;
+    transition: transform .2s;
+}
+.cart-items .cart-item-remove:hover {
+    transform: scale(1.5);
 }
 .inCart-btn {
     background-color: var(--primary-orange);
@@ -246,6 +253,11 @@ nav .slide-menu ul li a {
     padding: 15px;
     cursor: pointer;
 }
+.cart-msg {
+    color: var(--dark-grayish-blue);
+    font-weight: 700;
+}
+
 /* End of Header */
 
 /* Section Image Slider */

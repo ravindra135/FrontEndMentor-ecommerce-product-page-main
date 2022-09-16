@@ -6,6 +6,8 @@ const quantity = document.getElementById('quantity');
 const checkout = document.getElementById('checkout-btn');
 const cartCount = document.getElementById('cart-count');
 const headCart = document.getElementById('header-cart');
+const emptyCart = document.getElementById('empty-cart');
+const cart = document.getElementById('cart');
 let cartItem = 0;
 
 /* Inventory Increase and Decrease */
@@ -26,8 +28,8 @@ document.getElementById('inv-increase').addEventListener('click', () => {
 
 // Show Cart-Items Pop Up on Click
 headCart.addEventListener('click', () => {
-    document.getElementById('cart').style.animation = 'showCart .7s ease-in';
-    document.getElementById('cart').classList.toggle('cart-open');
+    cart.style.animation = 'showCart .7s ease-in';
+    cart.classList.toggle('cart-open');
     // If Cart is Empty;
     if(cartItem == 0) {
         document.getElementById('cart-products').classList.add('cart-empty');
@@ -53,7 +55,23 @@ checkout.addEventListener('click', () => {
     }
 });
 
+// On Empty Cart
+emptyCart.addEventListener('click', () => {
+    cartItem = 0;
+    document.getElementById('cart-products').classList.add('cart-empty');
+    document.getElementById('cart-msg').classList.remove('hidden');
+    cartCount.classList.toggle('hidden');
+    quantity.innerHTML = '0';
+});
+
 /* End of Cart Process */
+
+// On Scroll Side Menu wil Hide;
+document.addEventListener('scroll', (event) => {
+    if(!slideMenu.contains(event.target)) {
+        menuClose();
+    }
+});
 
 /* Navbar Open & Close */
 menuOpenBtn.addEventListener('click', menuOpen);
@@ -69,7 +87,7 @@ function menuOpen() {
 
 function menuClose() {
     if(slideMenu.classList.contains('open')) {
-        slideMenu.style.animation = 'slide-out .5s';
+        slideMenu.style.animation = 'slide-out .6s';
         slideMenu.classList.toggle('open');
         document.querySelector('nav').classList.toggle('menuOpen');
     }
