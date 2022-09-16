@@ -28,12 +28,6 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
-.padd {
-    padding: 0 7rem;
-}
-.mob-padd {
-    padding: 0 1rem;
-}
 .hidden {
     display: none;
 }
