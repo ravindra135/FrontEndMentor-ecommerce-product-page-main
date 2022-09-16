@@ -41,12 +41,33 @@
       <div class="avatar-cart-group">
         <div class="cart-btn">
           <img src="./images/icon-cart.svg" alt="">
-          <div class="cart-count hidden">
-            <span>2</span>
+          <div id="cart-count" class="cart-count hidden">
+            <span id="cart-count-quantity">2</span>
           </div>
         </div>
         <div class="avatar">
           <img src="./images/image-avatar.png" alt="">
+        </div>
+        <div id="cart" class="cart">
+          <div class="cart-header">Cart</div>
+          <div class="cart-body">
+            <div class="products-in-cart">
+              <div class="cart-items">
+                <div class="cart-item-img">
+                  <img class="inCart-img" src="./images/image-product-1-thumbnail.jpg" alt="">
+                </div>
+                <div class="cart-item-info">
+                  <p>Autumn Limited Edition...</p>
+                  <p>$125.00 x <span id="inCart-quantity">3</span> <span id="final-price">$375.00</span></p>
+                </div>
+                <div class="cart-item-remove">
+                  <img src="./images/icon-delete.svg" alt="">
+                </div>
+              </div>
+              <div class="inCart-btn btn">Checkout</div>
+            </div>
+            <div class="cart-msg hidden">Your cart is empty.</div>
+          </div>
         </div>
       </div>
     </header>
@@ -85,7 +106,7 @@
               <img src="./images/icon-plus.svg" alt="inventory-add">
             </div>
           </div>
-          <div class="addToCart btn">
+          <div id="checkout-btn" class="addToCart btn">
             <img src="./images/icon-cart.svg" alt="add to cart btn">
             <span>Add to cart</span>
           </div>
