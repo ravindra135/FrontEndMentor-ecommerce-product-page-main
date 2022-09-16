@@ -58,7 +58,7 @@ nav.menuOpen {
     left: 0;
     right: 0;
     height: 100vh;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav .slide-menu {
@@ -128,6 +128,7 @@ nav .slide-menu ul li a {
 }
 .avatar-cart-group .cart-btn {
     position: relative;
+    cursor: pointer;
 }
 .avatar-cart-group .cart-btn img:hover {
     filter: brightness(10%);
@@ -160,6 +161,7 @@ nav .slide-menu ul li a {
     border-radius: 11px;
     z-index: 1;
     width: auto;
+    display: none;
     height: 100%;
     max-height: 240px;
     background-color: var(--clr-white);
@@ -173,10 +175,29 @@ nav .slide-menu ul li a {
     left: 8px;
     right: 8px;
 }
+.cart-open {
+    display: block;
+}
+@keyframes showCart {
+    0% {
+       opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes hideCart {
+    0% {
+       opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
 .cart-header {
     padding: 20px;
     font-weight: 700;
-    border-bottom: 1px solid var(--light-grayish-blue);
+    border-bottom: 1px solid var(--grayish-blue);
 }
 .cart-body {
     max-height: 120px;
@@ -191,6 +212,9 @@ nav .slide-menu ul li a {
     gap: 20px;
     width: 100%;
     flex-direction: column;
+}
+.cart-empty{
+    display: none;
 }
 .cart-items {
     display: flex;
