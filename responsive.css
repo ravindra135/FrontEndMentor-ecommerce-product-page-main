@@ -1,0 +1,17 @@
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: green;
+    }
+
+    .container {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    header .menu-btn {
+        display: none;
+    }
+    nav .slide-menu {
+        background-color: grey;
+    }
+}

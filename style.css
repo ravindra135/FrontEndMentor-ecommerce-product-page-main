@@ -65,9 +65,9 @@ nav.menuOpen {
 }
 
 nav .slide-menu {
+    display: none;
     position: absolute;
     top: 0;
-    left: -270px;
     background-color: var(--clr-white);
     height: 100%;
     width: 50vw;
@@ -98,6 +98,7 @@ nav .slide-menu {
 
 nav .slide-menu.open {
     left: 0;
+    display: block;
 }
 nav .slide-menu img {
     cursor: pointer;
