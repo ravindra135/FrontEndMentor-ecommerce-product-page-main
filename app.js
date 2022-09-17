@@ -9,6 +9,7 @@ const headCart = document.getElementById('header-cart');
 const emptyCart = document.getElementById('empty-cart');
 const cart = document.getElementById('cart');
 const nav = document.querySelector('nav');
+const sliderImg = document.getElementById('slider-img-active');
 let cartItem = 0;
 
 /* Inventory Increase and Decrease */
@@ -46,7 +47,7 @@ checkout.addEventListener('click', () => {
     if(cartItem != 0) {
         cartCount.classList.remove('hidden');
         document.getElementById('cart-count-quantity').innerHTML = cartItem;
-        // Setting the Quantity in Cart Popup;
+        // Updating the Quantity in Cart Popup;
         let finalPrice = 125.00 * cartItem;
         document.getElementById('inCart-quantity').innerHTML = cartItem;
         document.getElementById('final-price').innerHTML = '$' + finalPrice + '.00'
@@ -70,7 +71,7 @@ emptyCart.addEventListener('click', () => {
 // On Scroll Side Menu wil Hide;
 document.addEventListener('scroll', (event) => {
     if(!slideMenu.contains(event.target)) {
-        // menuClose();
+        menuClose();
     }
 });
 
@@ -92,4 +93,21 @@ function menuClose() {
         slideMenu.classList.toggle('open');
         document.querySelector('nav').classList.toggle('menuOpen');
     }
+}
+/* End of Navbar Open & Close */
+
+/* Image Updating on Click */
+const galleryItem = document.querySelectorAll('.gallery-item');
+
+galleryItem.forEach(img => {
+    img.addEventListener('click', onThumbClick);
+});
+
+function onThumbClick(event) {
+    galleryItem.forEach(img => {
+        img.classList.remove('active');
+    });
+
+    event.target.parentElement.classList.add('active');
+    sliderImg.src = event.target.src.replace('-thumbnail', '');
 }

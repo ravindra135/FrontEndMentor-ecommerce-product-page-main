@@ -17,8 +17,10 @@ const productImage = [
     }
 ];
 
-const sliderImg = document.getElementById('slider-img-active');
-// productImage.forEach(element => {
-//     sliderImg.src = element.src;
-// });
+const galItem = document.createElement('p');
+const galImg = document.createTextNode('img');
+galItem.appendChild(galImg);
+const el = document.getElementById('gallery');
+el.appendChild(galItem);
+
 
