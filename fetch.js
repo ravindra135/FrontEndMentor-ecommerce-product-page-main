@@ -77,4 +77,73 @@ function setSliderImg(imageIndex) {
     sliderImg.src = "./images/image-product-" + imageIndex + ".jpg";
 }
 
-// Overlay Thumb Clicks
+/* on Desktop Hero Image Click */
+/* Opens a Overlay,*/
+const mobImg = document.querySelector('.img-slider');
+
+sliderImg.addEventListener('click', () => {
+    if (window.innerWidth >= 1200) {
+        const newNode = mobImg.cloneNode(true);
+        overlay.appendChild(newNode);
+        overlay.classList.remove('hidden');
+
+        closeBtn = document.getElementById('close-btn');
+        closeBtn.addEventListener('click', closeOverlay);
+
+        overGal = overlay.querySelectorAll('.gallery-item');
+        overImgSlider = overlay.querySelector('.image-active');
+        overGal.forEach(img => {
+            img.addEventListener('click', overThumbClick);
+            // Function in another JS file;
+        });
+
+        nextImg = overlay.querySelector('.next');
+        nextImg.addEventListener('click', overNextClick);
+        
+        prevImg = overlay.querySelector('.previous');
+        prevImg.addEventListener('click', overPrevClick); 
+    }
+});
+
+function closeOverlay() {
+    overlay.classList.add('hidden');
+    const lastchild = overlay.lastChild;
+    overlay.removeChild(lastchild);
+}
+
+function overThumbClick(event) {
+    overGal.forEach(img => {
+        img.classList.remove('slide-active');
+    });
+    event.target.parentElement.classList.add('slide-active');
+    overImgSlider.src = event.target.src.replace('-thumbnail', '');
+}
+
+function overNextClick() {
+    let imageIndex = getOverCurrentImageIndex();
+    imageIndex++;
+    if(imageIndex > 4) {
+        imageIndex = 1;
+    }
+    setOverlaySlider(imageIndex);
+}
+
+function overPrevClick() {
+    let imageIndex = getOverCurrentImageIndex();
+    imageIndex--;
+    if(imageIndex < 1) {
+        imageIndex = 4;
+    }
+    setOverlaySlider(imageIndex);
+}
+
+function getOverCurrentImageIndex() {
+    const imageIndex = parseInt(overImgSlider.src.split('-').pop().replace('.jpg', ''));
+    return imageIndex;
+}
+
+function setOverlaySlider(imageIndex) {
+    overImgSlider.src = "./images/image-product-" + imageIndex + ".jpg";
+
+}
+/* Overlay Js Ends Here*/
