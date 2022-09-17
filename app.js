@@ -95,19 +95,3 @@ function menuClose() {
     }
 }
 /* End of Navbar Open & Close */
-
-/* Image Updating on Click */
-const galleryItem = document.querySelectorAll('.gallery-item');
-
-galleryItem.forEach(img => {
-    img.addEventListener('click', onThumbClick);
-});
-
-function onThumbClick(event) {
-    galleryItem.forEach(img => {
-        img.classList.remove('active');
-    });
-
-    event.target.parentElement.classList.add('active');
-    sliderImg.src = event.target.src.replace('-thumbnail', '');
-}

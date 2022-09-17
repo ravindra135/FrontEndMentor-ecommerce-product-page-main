@@ -102,10 +102,10 @@
     .gallery-item img:hover {
         opacity: 65%;
     }
-    .gallery-item.active  {
+    .gallery-item.slide-active  {
         border: 3px solid var(--primary-orange);
     }
-    .gallery-item.active img {
+    .gallery-item.slide-active img {
         opacity: 0.35;
     }
     .image-gallery .gallery-item img {
