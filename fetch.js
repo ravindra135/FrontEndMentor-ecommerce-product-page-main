@@ -76,3 +76,5 @@ function getCurrentImageIndex() {
 function setSliderImg(imageIndex) {
     sliderImg.src = "./images/image-product-" + imageIndex + ".jpg";
 }
+
+// Overlay Thumb Clicks

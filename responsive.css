@@ -79,6 +79,7 @@
         min-height: 300px;
         max-height: 520px;
         border-radius: 12px;
+        cursor: pointer;
     }
 
     .previous, .next {
@@ -98,6 +99,9 @@
         border-radius: 8px;
         border: 3px solid transparent;
         cursor: pointer;
+    }
+    .gallery-item img {
+        /* z-index: 5; */
     }
     .gallery-item img:hover {
         opacity: 65%;
@@ -142,9 +146,9 @@
         justify-content: space-between;
     }
     .inventory {
-        width: 50%;
+        width: 40%;
         gap: 10px;
-        padding: 0 10px;
+        padding: 5px;
     }
     .addToCart {
         width: 100%;
@@ -155,4 +159,66 @@
 
     /* End of Section Product Info */
 
+    /* Overlay for Slider Image */
+    .overlay {
+        background: var(--clr-black);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .overlay .close {
+        width: 30%;
+        text-align: end;
+    }
+    .overlay .close img {
+        width: 20px;
+        filter: brightness(300%);
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    .overlay .close img:hover {
+        animation: rotate 1.5s;
+    }
+    .overlay .img-slider {
+        width: 30%;
+    }
+
+    .overlay .img-slider img.image-active {
+        position: relative;
+    }
+
+    .overlay .previous, 
+    .overlay .next {
+        display: flex;
+        position: absolute;
+        transform: unset;
+        top: 35%;
+    }
+    .overlay .previous {
+        left: -15px;
+    }
+    .overlay .next {
+        right: -15px;
+    }
+
+    .overlay .gallery-item.slide-active img {
+        filter: contrast(50%);
+        opacity: 1;
+    }
+    .overlay .gallery-item img:hover {
+        opacity: unset;
+        filter: contrast(70%);
+    }
 }

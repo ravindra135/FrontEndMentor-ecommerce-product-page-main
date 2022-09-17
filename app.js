@@ -10,6 +10,7 @@ const emptyCart = document.getElementById('empty-cart');
 const cart = document.getElementById('cart');
 const nav = document.querySelector('nav');
 const sliderImg = document.getElementById('slider-img-active');
+const overlay = document.querySelector('.overlay');
 let cartItem = 0;
 
 /* Inventory Increase and Decrease */
@@ -95,3 +96,29 @@ function menuClose() {
     }
 }
 /* End of Navbar Open & Close */
+
+/* on Image Click */
+const mobImg = document.querySelector('.img-slider');
+const closeBtn = document.getElementById('close-btn');
+
+sliderImg.addEventListener('click', () => {
+    if (window.innerWidth >= 1200) {
+        const newNode = mobImg.cloneNode(true);
+        overlay.appendChild(newNode);
+        overlay.classList.remove('hidden');
+
+        const overThumb = overlay.querySelectorAll('.gallery-item');
+        console.log(overThumb);
+        overThumb.addEventListener('click', onOverThumbClick);
+    }
+});
+
+function onOverThumbClick() {
+    console.log("clicked on Thumb");
+}
+
+closeBtn.addEventListener('click', () => {
+    overlay.classList.add('hidden');
+    const lastchild = overlay.lastChild;
+    overlay.removeChild(lastchild);
+});
