@@ -18,7 +18,7 @@ const productImage = [
     }
 ];
 
-// Creating a Element
+// Creating a Element depending on number of images;
 productImage.forEach(img => {
     const galItem = document.createElement('div');
     galItem.classList.add('gallery-item');
@@ -146,4 +146,4 @@ function setOverlaySlider(imageIndex) {
     overImgSlider.src = "./images/image-product-" + imageIndex + ".jpg";
 
 }
-/* Overlay Js Ends Here*/
+/* Overlay Ends Here*/
