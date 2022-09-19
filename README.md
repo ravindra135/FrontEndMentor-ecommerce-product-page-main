@@ -13,7 +13,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -34,12 +33,27 @@ Users should be able to:
 
 ### Screenshot
 
+- Desktop Design
+![Desktop Design Image](./images/desktopDesign.jpeg)
+- Desktop Cart
+![Desktop cart Image](./images/desktopCart.jpeg)
+- Desktop Overlay
+![Desktop Overlay images](./images/desktopOverlay.jpeg)
+- Mobile Design
+![Mobile Design images](./images/mobileDesign.jpg)
 
+- Mobile Nav
+
+![Mobile Nav images](./images/mobileNav.jpg)
+
+- Mobile Cart
+
+![Mobile Cart](./images/mobileCart.jpg)
 
 ### Links
 
-- Solution URL: [Github Repo](https://your-solution-url.com)
-- Live Site URL: [Live Here](https://your-live-site-url.com)
+- Solution URL: [Github Repo](https://github.com/ravindra135/FrontEndMentor-ecommerce-product-page-main/)
+- Live Site URL: [Live Here](https://ravindra135.github.io/FrontEndMentor-ecommerce-product-page-main/)
 
 ## My process
 
@@ -55,13 +69,14 @@ Users should be able to:
 - CSS Custom Properties;
 - Animation **@keyframes** in css;
 - Wroking with Arrays in JS.
-
-
-### Useful resources
-
+- Constructing Dynamic Data;
+- Animation with JS;
 
 ## Author
 
+- Frontend Mentor - [@ravindra135](https://www.frontendmentor.io/profile/ravindra135)
+- Github - [@ravindra135](https://github.com/ravindra135/)
+- Instagram - [@ravindra_since2k](https://www.instagram.com/ravindra_since2k/)
 
 ## Acknowledgments
 
